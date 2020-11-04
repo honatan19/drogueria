@@ -1,0 +1,7 @@
+{
+  "name": "drogueria",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

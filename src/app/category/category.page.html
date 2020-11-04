@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family:cursive;">Productos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="infcateg"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let result of results; let i = index">
+    <ion-card-header>
+      <ion-img [src]="result.image"></ion-img>
+      <ion-card-title style="font-family:cursive;" class="titulo_style" >{{ result.name }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content style="font-family:cursive;">
+      {{ result.description }}
+    </ion-card-content>
+    <div style="text-align: center;">
+      <ion-button style="font-family: cursive;" [routerLink]="'/product/' + result.id">Ver detalles</ion-button>
+    </div>
+  </ion-card>
+</ion-content>
