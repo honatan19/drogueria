@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="createClientForm" (submit)="createClient()">
+    <ion-item>
+      <ion-label stacked>Nombre</ion-label>
+      <ion-input formControlName="nameClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Apellido</ion-label>
+      <ion-input formControlName="lastNameClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Número de Documento</ion-label>
+      <ion-input formControlName="docNumberClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Teléfono</ion-label>
+      <ion-input formControlName="phoneClient" type="text"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit" [disabled]="!createClientForm.valid">Crear</ion-button>
+  </form>
+</ion-content>
